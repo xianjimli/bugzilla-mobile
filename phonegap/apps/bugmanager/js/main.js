@@ -1,6 +1,5 @@
 var gDefaultAccounts = [
-	{desc:"Apache Issues", server:"http://issues.apache.org/bugzilla/", username:"xianjimli@hotmail.com", password:""},
-	{desc:"Mozilla Issues", server:"https://bugzilla.mozilla.org/", username:"xianjimli@hotmail.com", password:""}
+	{desc:"Apache Issues", server:"http://issues.apache.org/bugzilla/", username:"xianjimli@hotmail.com", password:""}
 ];
 
 function WinAddAccountController(win) {
