@@ -7,7 +7,7 @@ This project  is the bugzilla for mobile devices. You can run it as web app or m
 
 [Build-As-Mobile-App](https://github.com/xianjimli/bugzilla-mobile/wiki/Build-As-Mobile-App)
 
-[Edit App UI In 画app吧](http://www.drawapp8.net/appedit.php?url=https://github.com/xianjimli/bugzilla-mobile/raw/master/app.jso)
+[Edit App UI In 画app吧](http://www.drawapp8.com/appedit.php?url=https://github.com/xianjimli/bugzilla-mobile/raw/master/app.jso)
 
 ScreenShots
 ---------------------------------
