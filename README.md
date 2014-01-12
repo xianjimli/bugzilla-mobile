@@ -7,17 +7,24 @@ This project  is the bugzilla for mobile devices. You can run it as web app or m
 
 [Build-As-Mobile-App](https://github.com/xianjimli/bugzilla-mobile/wiki/Build-As-Mobile-App)
 
+[Edit App UI In 画app吧](http://www.drawapp8.net/appedit.php?url=https://github.com/xianjimli/bugzilla-mobile/raw/master/app.jso)
 
 ScreenShots
 ---------------------------------
 
+
+Account List
+
+> Long Press To Edit Selected Account.
+
+> Slide Right To Remove Selected Account.
+
+***
+![0](https://github.com/xianjimli/bugzilla-mobile/raw/master/screenshots/20140111160133.png)
+
 Edit Account
 ***
 ![0](https://github.com/xianjimli/bugzilla-mobile/raw/master/screenshots/20140111160056.png)
-
-Account List
-***
-![0](https://github.com/xianjimli/bugzilla-mobile/raw/master/screenshots/20140111160133.png)
 
 About
 ***
