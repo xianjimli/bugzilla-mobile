@@ -1,7 +1,3 @@
-var gDefaultAccounts = [
-	{desc:"Apache Issues", server:"http://issues.apache.org/bugzilla/", username:"xianjimli@hotmail.com", password:""}
-];
-
 function WinAddAccountController(win) {
 	var desc = win.findChildByName("ui-edit-desc", true);
 	var server = win.findChildByName("ui-edit-server", true);
@@ -18,6 +14,7 @@ function WinAddAccountController(win) {
 			password.setText(initInfo.password);
 		}
 		else {
+			server.setText(getDefaultServerName());
 			title.setText("Add Account");
 		}
 
@@ -55,6 +52,10 @@ function WinMainController(win) {
 
 	this.loadAccounts = function() {
 		var accounts = localStorage.bugAccounts ? JSON.parse(localStorage.bugAccounts) : [];
+		if(!accounts.length) {
+			accounts = configGetDefaultAccounts();
+			this.saveAccounts(accounts);
+		}
 
 		return accounts;
 	}
@@ -107,15 +108,6 @@ function WinMainController(win) {
 
 		for(var i = 0; i < accounts.length; i++) {
 			var iter = accounts[i];
-			var item = {children:[]};
-			item.userData = iter;
-			item.children.push({textColor:"#888888", text: iter.desc});
-
-			data.children.push(item);
-		}
-		
-		for(var i = 0; i < gDefaultAccounts.length; i++) {
-			var iter = gDefaultAccounts[i];
 			var item = {children:[]};
 			item.userData = iter;
 			item.children.push({textColor:"#888888", text: iter.desc});

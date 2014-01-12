@@ -4,7 +4,7 @@ function httpGetPage(url, method, data, xpath, onDone) {
 	rInfo.url = url;
 	rInfo.data = data;
 	rInfo.noCache = true;
-	rInfo.noProxy = true;
+	rInfo.noProxy = !configIsProxyEnabled();
 	rInfo.method = method ? method : "GET";
 	console.log(url);
 	rInfo.onDone = function(result, xhr, respContent) { 

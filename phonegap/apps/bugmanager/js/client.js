@@ -151,7 +151,7 @@ function BugZillaClient() {
 		
 		rInfo.url = url;
 		rInfo.noCache = true;
-		rInfo.noProxy = true;
+		rInfo.noProxy = !configIsProxyEnabled();
 		rInfo.method = "GET";
 		
 		var bugs = [];
@@ -187,7 +187,7 @@ function BugZillaClient() {
 		
 		rInfo.url = url;
 		rInfo.noCache = true;
-		rInfo.noProxy = true;
+		rInfo.noProxy = !configIsProxyEnabled();
 		rInfo.method = "GET";
 		
 		var bugs = [];
@@ -237,7 +237,7 @@ function BugZillaClient() {
 		
 		rInfo.url = url;
 		rInfo.noCache = true;
-		rInfo.noProxy = true;
+		rInfo.noProxy = !configIsProxyEnabled();
 		rInfo.method = "GET";
 		
 		var bugs = [];
@@ -475,7 +475,7 @@ function BugZillaClient() {
 		
 		rInfo.url = url;
 		rInfo.noCache = true;
-		rInfo.noProxy = true;
+		rInfo.noProxy = !configIsProxyEnabled();
 		rInfo.method = "GET";
 		
 		var bugs = [];
@@ -496,16 +496,6 @@ function BugZillaClient() {
 	}
 
 	return this;
-}
-
-function getBugClientDesc() {
-	return "BugZilla Client";
-}
-
-function createBugClient() {
-	var client = new BugZillaClient();
-
-	return client;
 }
 
 function normalizeBugKey(key) {
@@ -537,3 +527,27 @@ function normalizeBugKey(key) {
 
 	return key;
 }
+
+//////////////////////////////////////////////////
+
+function getDefaultServerName() {
+	if(window.location.protocol.indexOf("http") >= 0 && window.location.host.indexOf("drawapp8") < 0) {
+		var href = window.location.href;
+		var server = href.substr(0, href.lastIndexOf("/")+1);
+
+		return server;
+	}
+	
+	return "";
+}
+
+function getBugClientDesc() {
+	return "BugZilla Client";
+}
+
+function createBugClient() {
+	var client = new BugZillaClient();
+
+	return client;
+}
+
